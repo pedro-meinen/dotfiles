@@ -12,6 +12,8 @@ args = ["server"]
 
 [language-server.basedpyright.config]
 basedpyright.analysis.diagnosticMode = "openFilesOnly"
+basedpyright.analysis.typeCheckingMode = "strict"
+
 
 [[language]]
 name = "javascript"
