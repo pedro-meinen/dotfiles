@@ -4,6 +4,9 @@ theme = catppuccin-mocha.conf
 font-size = 12
 font-family = CaskaydiaCove Nerd Font
 
+command = zsh
+shell-integration = zsh 
+
 # Window Configuration
 window-decoration = false
 window-padding-x = 12
