@@ -1,0 +1,24 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "2301ff8"
+hash = "27ca02f49fd236b5cc7bf03c243859fe"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "2301ff8"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:no-status"
+rev = "2301ff8"
+hash = "3e023d31f29201efdac2a6ae35fedb78"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "a63550b"
+hash = "c2021386289a0cbb3e152a052f67c177"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "f6b425a"
+hash = "14b111562c00eb1917fe3ca3ae9bb771"
