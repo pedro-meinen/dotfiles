@@ -161,8 +161,38 @@ binds {
     Mod+Return hotkey-overlay-title="Open Terminal" {
         spawn "ghostty"
     }
-    Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "fuzzel"
+    Mod+Space {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"
+    }
+    Mod+S {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"
+    }
+    Mod+Comma {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"
+    }
+    // Audio controls
+    XF86AudioRaiseVolume {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"
+    }
+    XF86AudioLowerVolume {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"
+    }
+    XF86AudioMute {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"
+    }
+    // Brightness controls
+    XF86MonBrightnessUp {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"
+    }
+    XF86MonBrightnessDown {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"
+    }
+    // Utility shortcuts
+    Mod+V {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"
+    }
+    Mod+L {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"
     }
     Mod+B hotkey-overlay-title="Browser" {
         spawn "firefox"
@@ -200,18 +230,6 @@ binds {
         focus-window-up
     }
     Mod+Right {
-        focus-column-right
-    }
-    Mod+H {
-        focus-column-left
-    }
-    Mod+J {
-        focus-window-down
-    }
-    Mod+K {
-        focus-window-up
-    }
-    Mod+L {
         focus-column-right
     }
     // === Window Movement ===
