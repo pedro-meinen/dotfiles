@@ -55,10 +55,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Yazi Helper
 function y() {
-  local tmp
-  tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
   IFS= read -r -d '' cwd < "$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd" || return
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
   rm -f -- "$tmp"
 }
