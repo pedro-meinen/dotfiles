@@ -2,7 +2,7 @@
     "appLauncher": {
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "enableClipboardHistory": false,
+        "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
         "position": "center",
@@ -15,7 +15,7 @@
         "externalMixer": "pwvucontrol || pavucontrol",
         "mprisBlacklist": [
         ],
-        "preferredPlayer": "",
+        "preferredPlayer": "mpv",
         "visualizerQuality": "high",
         "visualizerType": "linear",
         "volumeOverdrive": false,
@@ -144,7 +144,7 @@
                 "id": "profile-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "shortcuts-card"
             },
             {
@@ -160,7 +160,7 @@
                 "id": "media-sysmon-card"
             }
         ],
-        "position": "center",
+        "position": "top_left",
         "shortcuts": {
             "left": [
                 {
@@ -170,18 +170,12 @@
                     "id": "Bluetooth"
                 },
                 {
-                    "id": "ScreenRecorder"
-                },
-                {
                     "id": "WallpaperSelector"
                 }
             ],
             "right": [
                 {
                     "id": "Notifications"
-                },
-                {
-                    "id": "PowerProfile"
                 },
                 {
                     "id": "KeepAwake"
@@ -232,7 +226,7 @@
     "location": {
         "analogClockInCalendar": false,
         "firstDayOfWeek": -1,
-        "name": "Tokyo",
+        "name": "Canarana - MT",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
