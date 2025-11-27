@@ -1,0 +1,8 @@
+version: "2"
+output:
+  formats:
+    json:
+      path: stdout
+  show-stats: false
+run:
+  issues-exit-code: 1

@@ -40,6 +40,8 @@ export EDITOR="/usr/bin/helix"
 export VISUAL="/usr/bin/helix"
 export SUDO_EDITOR="/usr/bin/helix"
 
+export PATH=$PATH:$(go env GOPATH)/bin
+
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey -e

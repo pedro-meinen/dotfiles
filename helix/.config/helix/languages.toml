@@ -14,6 +14,11 @@ args = ["server"]
 basedpyright.analysis.diagnosticMode = "openFilesOnly"
 basedpyright.analysis.typeCheckingMode = "strict"
 
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "-c", "~/.config/helix/.golangci.yml"]
 
 [[language]]
 name = "javascript"
@@ -39,4 +44,12 @@ auto-format = true
 name = "python"
 language-servers = ["basedpyright", "ruff", "ty"]
 auto-format = true
+
+[[language]]
+name = "go"
+roots = ["go.work", "go.mod"]
+auto-format = true
+formatter = ["gofmt"]
+comment-token = "//"
+language-servers = [ "gopls", "golangci-lint-lsp" ]
 
