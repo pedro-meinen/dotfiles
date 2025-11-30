@@ -5,3 +5,5 @@
 [user]
 	email = pedromeinen99@gmail.com
 	name = Pedro Henrique Souza Meinen
+[init]
+	defaultBranch = main
