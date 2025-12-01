@@ -10,7 +10,7 @@
         "sortByMostUsed": true,
         "terminalCommand": "ghostty -e",
         "useApp2Unit": false,
-        "viewMode": "list"
+        "viewMode": "grid"
     },
     "audio": {
         "cavaFrameRate": 30,
@@ -111,7 +111,7 @@
     "calendar": {
         "cards": [
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "banner-card"
             },
             {
@@ -119,7 +119,7 @@
                 "id": "calendar-card"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "timer-card"
             },
             {

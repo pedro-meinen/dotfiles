@@ -57,6 +57,7 @@ overview {
     }
 }
 spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "python3" "/home/pedro/.config/niri/niri_tile_to_n.py" "-n" "2"
 environment {
     XDG_CURRENT_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"
@@ -64,6 +65,8 @@ environment {
     QT_QPA_PLATFORMTHEME "gtk3"
     QT_QPA_PLATFORMTHEME_QT6 "gtk3"
     TERMINAL "ghostty"
+    EDITOR "helix"
+    SUDO_EDITOR "helix"
     SHELL "/usr/bin/zsh"
 }
 hotkey-overlay {
@@ -172,6 +175,9 @@ binds {
     Mod+B hotkey-overlay-title="Open Browser" {
         spawn "firefox"
     }
+    Ctrl+Shift+Escape hotkey-overlay-title="Open System Monitor" {
+        spawn "ghostty" "-e" "btm"
+    }
     Mod+Space hotkey-overlay-title="Open App Launcher" {
         spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"
     }
@@ -209,7 +215,7 @@ binds {
         spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"
     }
     Mod+Shift+E {
-        quit
+        quit skip-confirmation=true;
     }
     // === Window Management ===
     Mod+Q repeat=false {
@@ -525,4 +531,23 @@ binds {
         power-off-monitors
     }
 }
+recent-windows {
+    debounce-ms 750
+    open-delay-ms 150
 
+    highlight {
+        active-color "#707070"
+        urgent-color "#cc4444"
+        padding 30
+        corner-radius 20
+    }
+
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+    }
+}
