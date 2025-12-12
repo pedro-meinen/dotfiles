@@ -7,7 +7,8 @@ input {
     focus-follows-mouse
     keyboard {
         xkb {
-            options "caps:swapescape"
+            layout "br,us"
+            options "grp:alt_space_toggle,caps:swapescape"
         }
         numlock
     }
