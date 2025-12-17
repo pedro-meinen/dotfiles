@@ -20,6 +20,10 @@ command = "golangci-lint-langserver"
 [language-server.golangci-lint-lsp.config]
 command = ["golangci-lint", "run", "-c", "~/.config/helix/.golangci.yml"]
 
+[language-server.tinymist]
+command = "tinymist"
+config = { preview.background.enabled = true, preview.background.args = ["--data-plane-host=127.0.0.1:23635", "--invert-colors=never", "--open"] }
+
 [[language]]
 name = "javascript"
 formatter = { command = 'biome', args = ["format", "--stdin-file-path", "buffer.js"] }
@@ -42,7 +46,7 @@ auto-format = true
 
 [[language]]
 name = "python"
-language-servers = ["basedpyright", "ruff", "ty"]
+language-servers = ["ruff", "ty"]
 auto-format = true
 
 [[language]]
@@ -53,3 +57,7 @@ formatter = ["gofmt"]
 comment-token = "//"
 language-servers = [ "gopls", "golangci-lint-lsp" ]
 
+[[language]]
+name = "typst"
+auto-format = true
+language-servers = ["tinymist"]
