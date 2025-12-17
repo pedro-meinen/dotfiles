@@ -59,6 +59,7 @@ overview {
 }
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "python3" "/home/pedro/.config/niri/niri_tile_to_n.py" "-n" "2"
+spawn-at-startup "/usr/lib/soteria-polkit/soteria"
 environment {
     XDG_CURRENT_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"
