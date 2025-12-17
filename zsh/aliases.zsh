@@ -1,0 +1,23 @@
+# Git Aliases
+alias gs="git status"
+alias gc="git commit -m"
+alias gca="git commit --ammend --no-edit"
+alias gce="git commit --ammend"
+alias gap="git add --patch"
+alias gaa="git add -A"
+alias gp="git push"
+alias gu="git pull"
+alias gcl="git clone"
+alias gsw="git switch"
+alias gb="git branch"
+alias gbn="git switch -c"
+alias gbd="git branch -d"
+alias gl="git log"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gr="git rebase"
+alias gm="git merge"
+
+# Lazy Aliases
+alias lg="lazygit"
+alias ld="lazydocker"
