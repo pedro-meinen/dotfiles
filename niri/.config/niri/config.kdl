@@ -181,7 +181,7 @@ binds {
         spawn "ghostty" "-e" "btm"
     }
     Mod+Space hotkey-overlay-title="Open App Launcher" {
-        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"
+        spawn "rofi" "-show" "drun"
     }
     Mod+S hotkey-overlay-title="Toggle Control Center" {
         spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"

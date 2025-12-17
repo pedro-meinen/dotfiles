@@ -1,0 +1,104 @@
+configuration {
+    modes: "run,drun";
+    sorting-method: "normal";
+    show-icons:true;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "Menu:";
+    display-drun: "Apps:";
+}
+
+@theme "catppuccin-mocha"
+
+* {
+    font: "Caskadya Code Nerd Font 12";
+
+    background-color:   transparent;
+    text-color:         @text;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       center;
+    width:          480;
+    y-offset:       -20;
+    border-radius:  24px;
+
+    border: 1px;
+    border-color: @mantle;
+    background-color:   @base;
+}
+
+mainbox {
+    padding:    12px;
+}
+
+inputbar {
+    background-color:   @base;
+    border-color:       @crust;
+    border-radius:  16px;
+    border:         2px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    text-color: @mauve;
+}
+
+entry {
+    placeholder:        "Search";
+    placeholder-color:  @text;
+}
+
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       @crust;
+    background-color:   @base;
+}
+
+textbox {
+    padding:    8px 24px;
+    background-color:   @mantle;
+}
+
+listview {
+    background-color:   transparent;
+    margin:     12px 0 0;
+    columns:    1;
+
+    fixed-height: false;
+}
+
+element {
+    padding:        8px 16px;
+    spacing:        8px;
+    border-radius:  16px;
+}
+
+element normal urgent {
+  text-color: @red;
+}
+
+element normal active {
+    text-color: @overlay1;
+}
+
+element selected normal, element selected active {
+    background-color:   @mantle;
+}
+
+element-icon {
+    size:           1em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+}
